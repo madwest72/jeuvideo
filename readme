@@ -1,0 +1,36 @@
+# Jeu de Blackjack - Mode Histoire (Projet C)
+
+Bienvenue sur le dépôt de mon projet de développement en langage C, réalisé dans le cadre de ma formation en BTS SIO (option SLAM).
+
+Ce projet est une application console simulant le célèbre jeu de cartes du Blackjack. Il se distingue par l'intégration d'un mode "Histoire" où le joueur voyage à travers 5 casinos de renommée mondiale, affrontant le croupier avec des exigences financières de plus en plus élevées.
+
+## Objectifs du projet
+
+- Manipuler les concepts fondamentaux du langage C (pointeurs, structures, tableaux, boucles).
+- Développer un moteur de jeu textuel (génération de nombres aléatoires, calcul des scores, conditions de victoire/défaite).
+- Gérer l'état de la partie et la progression du joueur via des passages par adresse (utilisation de pointeurs pour la gestion du portefeuille).
+- Améliorer l'expérience utilisateur dans la console grâce à l'utilisation de séquences d'échappement ANSI pour colorer le texte.
+
+## Fonctionnalités principales
+
+- Règles du Blackjack : Le joueur peut tirer des cartes pour s'approcher de 21 sans le dépasser. Le croupier obéit à la règle classique l'obligeant à tirer jusqu'à atteindre un score minimum de 17.
+- Tournoi en 5 étapes : Le joueur doit survivre aux tables de Paris, Londres, Monaco, Macao et enfin Las Vegas.
+- Économie intégrée : Le joueur démarre avec 200 $. Chaque ville impose une mise minimale croissante. Si les fonds tombent en dessous de la mise minimale de la ville actuelle, c'est le Game Over.
+
+## Architecture du code
+
+Le programme est structuré autour :
+- D'une structure `Casino` qui définit les propriétés de chaque niveau (nom, mise minimum, difficulté).
+- D'une fonction centrale `jouerNiveau` qui gère le déroulement d'une main (distribution, boucle de choix du joueur, tour du croupier, résolution des gains).
+- D'une boucle principale dans le `main` qui gère la progression géographique du joueur à travers un tableau de structures.
+
+## Compilation et exécution
+
+Ce programme utilise uniquement les bibliothèques standard du C (`stdio.h`, `stdlib.h`, `time.h`, `string.h`). Il peut être compilé avec n'importe quel compilateur C standard (comme GCC).
+
+### Sous Linux / macOS
+
+Ouvrez un terminal et tapez les commandes suivantes :
+```bash
+gcc blackjack.c -o blackjack
+./blackjack
