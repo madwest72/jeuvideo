@@ -34,3 +34,45 @@ Ouvrez un terminal et tapez les commandes suivantes :
 ```bash
 gcc blackjack.c -o blackjack
 ./blackjack
+```
+
+---
+
+# Jeu de Morpion (Projet Java)
+
+Ce dépôt contient également un second projet réalisé dans le cadre de ma formation en BTS SIO (option SLAM) : une application graphique Java (Swing) du jeu de Morpion (Tic-Tac-Toe).
+
+## Objectifs du projet
+
+- Manipuler les concepts fondamentaux de la programmation orientée objet en Java (classes, interfaces, héritage).
+- Construire une interface graphique avec la bibliothèque Swing (`JFrame`, `JButton`, `JLabel`, `JOptionPane`).
+- Gérer les événements utilisateur via l'implémentation de `ActionListener`.
+- Mettre en œuvre une logique de jeu simple : tour par tour, détection de victoire, détection de match nul.
+
+## Fonctionnalités principales
+
+- Saisie du nom et du prénom du joueur au lancement de l'application via des boîtes de dialogue (`JOptionPane`).
+- Grille de jeu 3x3 interactive : chaque case est un bouton cliquable qui affiche "X" ou "O" selon le joueur dont c'est le tour.
+- Détection automatique de la victoire (lignes, colonnes, diagonales), avec mise en surbrillance verte de la combinaison gagnante.
+- Détection du match nul lorsque la grille est remplie sans vainqueur.
+- Bouton "Rejouer" pour réinitialiser la grille sans fermer l'application.
+- Bouton "Quitter" avec demande de confirmation avant fermeture.
+
+## Architecture du code
+
+Le programme repose sur une seule classe `Morpion` qui :
+- Hérite de `JFrame` pour la fenêtre graphique.
+- Implémente `ActionListener` pour gérer les clics sur les 9 cases et sur les boutons "Rejouer" / "Quitter".
+- Centralise toute la logique de jeu (tour du joueur, vérification du gagnant, vérification du match nul) dans la méthode `actionPerformed`.
+
+## Compilation et exécution
+
+Ce programme n'utilise que la bibliothèque standard Java (`javax.swing`, `java.awt`). Il nécessite un JDK installé (version 11 ou supérieure).
+
+### Sous Windows / Linux / macOS
+
+Ouvrez un terminal dans le dossier du projet et tapez les commandes suivantes :
+```bash
+javac Morpion.java
+java Morpion
+```
